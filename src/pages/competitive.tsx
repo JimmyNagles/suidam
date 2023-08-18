@@ -18,7 +18,7 @@ const Competitive = () => {
   const contractAddress =
     "0xddba96419d5272af78072c88a4dbc451d0ae8a21eb84a69fb5098cda35b5f7c7";
 
-  const [nftObjectId, setNftObjectId] = useState(null);
+  const [nftObjectId, setNftObjectId] = useState<any>();
 
   const [gameStarted, setGameStarted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
@@ -49,8 +49,7 @@ const Competitive = () => {
 
   const startCompetitiveGame = async () => {
     // Logic to start the game, e.g., verifying user has enough tokens
-    mint().then();
-    setGameStarted(true);
+    mint();
   };
 
   useEffect(() => {
@@ -91,15 +90,14 @@ const Competitive = () => {
         },
       });
       console.log("Transaction Response", response);
-      setNftObjectId(response.object);
+      setNftObjectId(response);
+
+      setGameStarted(true);
     } catch (error) {
       console.log(error);
+      setGameStarted(false);
     }
   }, [wallet]);
-
-  const reset = useCallback(() => {
-    setNftObjectId(" dsa");
-  }, []);
 
   const renderButton = () => {
     // If wallet is not connected, return a button which allows them to connect their wallet
