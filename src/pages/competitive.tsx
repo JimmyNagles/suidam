@@ -186,7 +186,7 @@ const Competitive = () => {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col p">
+        <div className="mt-20 flex flex-col ">
           <h1 className="text-white text-4xl text-center p-4 ">Leaderboard</h1>
 
           <RankingsGrid>
