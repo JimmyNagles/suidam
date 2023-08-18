@@ -185,56 +185,61 @@ const Competitive = () => {
             />
           </div>
         </div>
-        <h1 className="text-white text-4xl mt-20">Leaderboard</h1>
 
-        <RankingsGrid>
-          <div className="grid grid-cols-2 items-center border-white border">
-            <h1 className="text-center p-4 text-white">Total ArcadeTokens</h1>
-            <h2 className=" text-center p-4 text-white">
-              42422312 ART = $30,312,00 USD
-            </h2>
-          </div>
+        <div className="mt-20 flex flex-col p">
+          <h1 className="text-white text-4xl text-center p-4 ">Leaderboard</h1>
 
-          <div>
-            {/* <h1>
-              <h1 className="text-white text-center mt-2 mb-2 p-2">
-                Tokens Getting Distributed In {formatTime(secondsRemaining)}
-              </h1>
-            </h1> */}
-          </div>
-          <div className="grid grid-cols-2 items-center border-white border">
-            <div className="grid grid-cols-2  ">
-              <h2 className="p-4 text-center text-white">RANK</h2>
-              <h2 className=" text-center p-4 text-white">SCORE</h2>
+          <RankingsGrid>
+            <div className="grid grid-cols-2 items-center border-white border">
+              <h1 className="text-center p-4 text-white">Total ArcadeTokens</h1>
+              <h2 className=" text-center p-4 text-white">
+                42422312 ART = $30,312,00 USD
+              </h2>
             </div>
-            <h1 className=" text-center p-4 text-white">ADDRESS</h1>
-          </div>
-          <Ranking
-            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
-            score={80}
-            rank={1}
-          ></Ranking>
-          <Ranking
-            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
-            score={76}
-            rank={2}
-          ></Ranking>
-          <Ranking
-            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
-            score={49}
-            rank={3}
-          ></Ranking>
-          <Ranking
-            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
-            score={36}
-            rank={4}
-          ></Ranking>
-          <Ranking
-            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
-            score={25}
-            rank={5}
-          ></Ranking>
-        </RankingsGrid>
+
+            <div className="h-[20px]">
+              {/* <h1>
+      <h1 className="text-white text-center mt-2 mb-2 p-2">
+        Tokens Getting Distributed In {formatTime(secondsRemaining)}
+      </h1>
+    </h1> */}
+            </div>
+            <div className="grid grid-cols-2 items-center border-white border">
+              <div className="grid grid-cols-2  ">
+                <h2 className="p-4 text-center text-white">RANK</h2>
+                <h2 className=" text-center p-4 text-white">SCORE</h2>
+              </div>
+              <h1 className=" text-center p-4 text-white">ADDRESS</h1>
+            </div>
+            <Ranking
+              address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+              score={80}
+              rank={1}
+            ></Ranking>
+            <Ranking
+              address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+              score={76}
+              rank={2}
+            ></Ranking>
+            <Ranking
+              address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+              score={49}
+              rank={3}
+            ></Ranking>
+            <Ranking
+              address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+              score={36}
+              rank={4}
+            ></Ranking>
+            <Ranking
+              address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+              score={25}
+              rank={5}
+            ></Ranking>
+          </RankingsGrid>
+        </div>
+
+        <div className="mb-20"></div>
       </div>
     );
   };
