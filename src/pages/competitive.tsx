@@ -10,6 +10,8 @@ import {
 } from "ethos-connect";
 import FlappyBirdCanvas from "../../components/FlappyBirdCanvas";
 import CompetitiveFlappyBirdCanvas from "../../components/CompetitiveFlappyBirdCanvas";
+import RankingsGrid from "../../components/Rankings/RankingsGrid";
+import Ranking from "../../components/Rankings/Ranking";
 
 const Competitive = () => {
   const router = useRouter();
@@ -156,7 +158,7 @@ const Competitive = () => {
               )}
 
               {gameStarted && (
-                <button className="p-4 mb-2 bg-blue-900 border-white  shadow-inner bg-opacity-20  hover:bg-opacity-80 hover:shadow-2xl transition-all duration-1000 ease-in w-[200px] text-white   rounded-md">
+                <button className="p-4 mb-2  bg-green-900 border-white  shadow-inner bg-opacity-90   transition-all duration-1000 ease-in w-[200px] text-white   rounded-md">
                   Ready To Start
                 </button>
               )}
@@ -185,31 +187,54 @@ const Competitive = () => {
         </div>
         <h1 className="text-white text-4xl mt-20">Leaderboard</h1>
 
-        <div className="w-full mt-28 p-8 flex flex-col ">
+        <RankingsGrid>
           <div className="grid grid-cols-2 items-center border-white border">
-            <h1 className="p-2 text-white">Address</h1>
-            <h2 className="p-2 text-white">SCORE</h2>
+            <h1 className="text-center p-4 text-white">Total ArcadeTokens</h1>
+            <h2 className=" text-center p-4 text-white">
+              42422312 ART = $30,312,00 USD
+            </h2>
           </div>
 
-          <div className="grid grid-cols-2 items-center border-white border">
-            <h1 className="p-2 text-white">Address</h1>
-            <h2 className="p-2 text-white">SCORE</h2>
-          </div>
-
-          <div className="grid grid-cols-2 items-center border-white border">
-            <h1 className="p-2 text-white">Address</h1>
-            <h2 className="p-2 text-white">SCORE</h2>
-          </div>
-
-          <div className="grid grid-cols-2 items-center border-white border">
-            <h1 className="p-2 text-white">Address</h1>
-            <h2 className="p-2 text-white">SCORE</h2>
+          <div>
+            {/* <h1>
+              <h1 className="text-white text-center mt-2 mb-2 p-2">
+                Tokens Getting Distributed In {formatTime(secondsRemaining)}
+              </h1>
+            </h1> */}
           </div>
           <div className="grid grid-cols-2 items-center border-white border">
-            <h1 className="p-2 text-white">Address</h1>
-            <h2 className="p-2 text-white">SCORE</h2>
+            <div className="grid grid-cols-2  ">
+              <h2 className="p-4 text-center text-white">RANK</h2>
+              <h2 className=" text-center p-4 text-white">SCORE</h2>
+            </div>
+            <h1 className=" text-center p-4 text-white">ADDRESS</h1>
           </div>
-        </div>
+          <Ranking
+            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+            score={80}
+            rank={1}
+          ></Ranking>
+          <Ranking
+            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+            score={76}
+            rank={2}
+          ></Ranking>
+          <Ranking
+            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+            score={49}
+            rank={3}
+          ></Ranking>
+          <Ranking
+            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+            score={36}
+            rank={4}
+          ></Ranking>
+          <Ranking
+            address="0x87d27d78b6bed045014f0f501d49d49cb5b4ef4db1801822722bfd7d79a18c66"
+            score={25}
+            rank={5}
+          ></Ranking>
+        </RankingsGrid>
       </div>
     );
   };
