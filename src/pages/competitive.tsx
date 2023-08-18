@@ -156,7 +156,7 @@ const Competitive = () => {
               )}
 
               {gameStarted && (
-                <button className="p-4 mb-2 bg-blue-900 border-white  shadow-inner bg-opacity-20  hover:bg-opacity-80 hover:shadow-2xl transition-all duration-1000 ease-in w-[200px] text-white   rounded-md">
+                <button className="p-4 mb-2  bg-green-900 border-white  shadow-inner bg-opacity-90   transition-all duration-1000 ease-in w-[200px] text-white   rounded-md">
                   Ready To Start
                 </button>
               )}
